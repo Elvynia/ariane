@@ -23,7 +23,7 @@
     "@angular/platform-server": "2.0.0-rc.6",
     "@trilliangular/core": "^0.4.0",
     "@trilliangular/inputs": "^0.4.0",
-    "@trilliangular/runtime-pixi": "^0.1.0",
+    "@trilliangular/runtime-pixi": "^0.2.0",
     "core-js": "^2.4.0",
     "lite-server": "^2.2.2",
     "mousetrap": "^1.6.0",
