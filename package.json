@@ -1,6 +1,6 @@
 {
   "name": "ariane",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Alpha version of Daedalus",
   "engines": {
     "node": "5.9.1"
