@@ -1,0 +1,27 @@
+<trilliangular [width]="wrapper.clientWidth" [height]="wrapper.clientHeight"
+	[debug]="true" (updated)="update($event)">
+	<pixi-scene>
+		<background [position]="backgroundOffset"></background>
+		<tg-actor [id]="'player'" (started)="init()">
+			<pixi-spine [bound]="true" [name]="'spineboy'" [jsonUrl]="'assets/hero/spineboy.json'" #player>
+				<tg-property key="POSITION" [value]="{x: 300, y: 375}"></tg-property>
+				<tg-property key="SCALE" [value]="0.25"></tg-property>
+			</pixi-spine>
+		</tg-actor>
+		<tg-actor [id]="'mobs'">
+		</tg-actor>
+	</pixi-scene>
+	<pixi-renderer [options]="{view: canvas, backgroundColor : 1087931}"></pixi-renderer>
+</trilliangular>
+<div class="canvas" #wrapper>
+	<canvas #canvas></canvas>
+</div>
+<div class="controls">
+	<tg-keys [keys]="'q'"
+		(keyDown)="!directions[1] && updateDirections(true, false)"
+		(keyUp)="!directions[1] && updateDirections(false, false)"></tg-keys>
+	<tg-keys [keys]="'d'"
+		(keyDown)="!directions[0] && updateDirections(true, true)"
+		(keyUp)="!directions[0] && updateDirections(false, true)"></tg-keys>
+	<tg-keys [keys]="'space'" (keyUp)="jump()"></tg-keys>
+</div>
